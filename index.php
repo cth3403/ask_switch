@@ -19,11 +19,38 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <!-- jQuery UI css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+
+	<script>
+		$(function() {
+			$( "#from" ).datepicker({
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 3,
+				onClose: function( selectedDate ) {
+					$( "#to" ).datepicker( "option", "minDate", selectedDate );
+				}
+			});
+			$( "#to" ).datepicker({
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 3,
+				onClose: function( selectedDate ) {
+					$( "#from" ).datepicker( "option", "maxDate", selectedDate );
+				}
+			});
+		});
+	</script>
+
   </head>
 
   <body>
 
-
+  	<label for="from">From</label>
+  	<input type="text" id="from" name="from" class="hasDatepicker">
+  	<label for="to">to</label>
+  	<input type="text" id="to" name="to" class="hasDatepicker">
 
 
 
