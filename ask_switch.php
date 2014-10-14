@@ -1,10 +1,11 @@
 <?php
 
+//require("config.php");
 
 $jd=cal_to_jd(CAL_GREGORIAN,date("m"),date("d"),date("Y"));
 $dayW = jddayofweek($jd,0);
 
-$dayArr= array(6,0);
+
 
 // check to see whether there are any closed days set
 if (sizeof($dayArr) > 0) {
@@ -17,6 +18,13 @@ foreach ($dayArr as $key => $value) {
 		return;
 	}
 }
+
+}
+
+// check to see if the manual switch has been flipped
+if ($switch == false){
+
+// set the chat as closed
 
 }
 
