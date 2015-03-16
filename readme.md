@@ -14,6 +14,4 @@ Then in the 'Admin Alert Box' switch to the Plain Text editor and add the follow
 
 Then everywhere you want the button to appear add the following HTML:
 
-<<<<<<< HEAD
 `<div id="chat_button"> <script type="text/javascript" src="http://[youserver]/ask_switch/chat_switch.js"></script></div>`
->>>>>>> c24b504d080e033da14f2913563664c50a048d71
