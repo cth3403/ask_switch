@@ -5,7 +5,7 @@ if(isset($_POST["chat_choice"])){
 
 	$myFile = "data/data.json";
 	$fh = fopen($myFile, 'w+') or die("can't open file");
-	$stringData = 'jsonpcallback({"switch" : "'.$_POST["chat_choice"].'"});';
+	$stringData = 'jsonpcallback({"json" : [{ "switch": "'.$_POST["chat_choice"].'"}]});';
 	fwrite($fh, $stringData);
 	fclose($fh);
 }
