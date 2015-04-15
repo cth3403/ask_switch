@@ -4,14 +4,11 @@
 To enable our librarians to switch between chat service provider depending on hours of operation i.e. LibChat for 9-5, Questionpoint for out of ours or to set chat as offline.
 
 ####Usage:
-In the LibAnswers 'Look and Feel' add the following to the Custom JS/CSS Code box:
+To the custom CSS/JS code option add:
 
-`<script type="text/javascript" src="http://[yourserver]/ask_switch/chat_switch.js"></script>`
+`<script type="text/javascript" src="[your.server]/status-test2.js"></script>`
 
-Then in the 'Admin Alert Box' switch to the Plain Text editor and add the following:
+Then everywhere where the slideout tab is shown the script should intercept and add QP as an alternative.
 
-`<div id="chat_choice"></div>`
 
-Then everywhere you want the button to appear add the following HTML:
 
-`<div id="chat_button"> <script type="text/javascript" src="http://[youserver]/ask_switch/chat_switch.js"></script></div>`
